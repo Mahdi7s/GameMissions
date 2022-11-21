@@ -1,0 +1,15 @@
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\bin\Debug\net7.0\GameMissions.Core.deps.json
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\bin\Debug\net7.0\GameMissions.Core.dll
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\bin\Debug\net7.0\GameMissions.Core.pdb
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\bin\Debug\net7.0\GameMissions.SharedKernel.dll
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\bin\Debug\net7.0\GameMissions.SharedKernel.pdb
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\obj\Debug\net7.0\GameMissions.Core.csproj.AssemblyReference.cache
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\obj\Debug\net7.0\GameMissions.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\obj\Debug\net7.0\GameMissions.Core.AssemblyInfoInputs.cache
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\obj\Debug\net7.0\GameMissions.Core.AssemblyInfo.cs
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\obj\Debug\net7.0\GameMissions.Core.csproj.CoreCompileInputs.cache
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\obj\Debug\net7.0\GameMissions.Core.csproj.CopyComplete
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\obj\Debug\net7.0\GameMissions.Core.dll
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\obj\Debug\net7.0\refint\GameMissions.Core.dll
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\obj\Debug\net7.0\GameMissions.Core.pdb
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Core\obj\Debug\net7.0\ref\GameMissions.Core.dll

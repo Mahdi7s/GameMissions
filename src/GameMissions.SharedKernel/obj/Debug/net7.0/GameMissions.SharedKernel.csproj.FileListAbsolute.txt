@@ -1,0 +1,12 @@
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\bin\Debug\net7.0\GameMissions.SharedKernel.deps.json
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\bin\Debug\net7.0\GameMissions.SharedKernel.dll
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\bin\Debug\net7.0\GameMissions.SharedKernel.pdb
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\obj\Debug\net7.0\GameMissions.SharedKernel.csproj.AssemblyReference.cache
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\obj\Debug\net7.0\GameMissions.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\obj\Debug\net7.0\GameMissions.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\obj\Debug\net7.0\GameMissions.SharedKernel.AssemblyInfo.cs
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\obj\Debug\net7.0\GameMissions.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\obj\Debug\net7.0\GameMissions.SharedKernel.dll
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\obj\Debug\net7.0\refint\GameMissions.SharedKernel.dll
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\obj\Debug\net7.0\GameMissions.SharedKernel.pdb
+C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.SharedKernel\obj\Debug\net7.0\ref\GameMissions.SharedKernel.dll

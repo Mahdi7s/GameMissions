@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.1.3" />
+  
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="6.1.0" />
+    <PackageReference Include="Autofac" Version="6.4.0"/>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0"/>
+    <PackageReference Include="SQLite" Version="3.13.0"/>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\GameMissions.Core\GameMissions.Core.csproj" />
+    <ProjectReference Include="..\GameMissions.SharedKernel\GameMissions.SharedKernel.csproj" />
+  </ItemGroup>
+</Project>

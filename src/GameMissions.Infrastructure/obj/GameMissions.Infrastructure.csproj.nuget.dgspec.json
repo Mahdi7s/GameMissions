@@ -1,0 +1,250 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj",
+        "projectName": "GameMissions.Core",
+        "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj",
+        "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
+          "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Ardalis.GuardClauses": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Ardalis.Result": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Ardalis.SmartEnum": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Ardalis.Specification": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj",
+        "projectName": "GameMissions.Infrastructure",
+        "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
+          "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj": {
+                "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj"
+              },
+              "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Ardalis.Specification.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
+        "projectName": "GameMissions.SharedKernel",
+        "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
+        "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
+          "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Ardalis.Specification": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
