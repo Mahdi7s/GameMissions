@@ -1,4 +1,4 @@
-using GameMissions.Web.Data;
+﻿using GameMissions.Web.Data;
 using GameMissions.Web.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
@@ -49,8 +49,9 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");
-app.MapRazorPages();
-
+//app.MapRazorPages();
+app.MapFallbackToFile("/products", "/products.html");
+app.MapFallbackToFile("/products/{pId}", "/products/[productId].html");
 app.MapFallbackToFile("index.html");
 
 app.Run();
