@@ -18,6 +18,6 @@ public class MissionAddedHandler : INotificationHandler<MissionAddedEvent>
   }
   public async Task Handle(MissionAddedEvent notification, CancellationToken cancellationToken)
   {
-    await _repository.AddAsync(notification.)
+    //await _repository.AddAsync(notification.)
   }
 }

@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "run-script-os": "^1.1.6"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
   }
 }

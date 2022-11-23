@@ -322,19 +322,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mah\\.nuget\\packages\\": {}
+    "C:\\Users\\mah\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj",
+      "projectUniqueName": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj",
       "projectName": "GameMissions.Core",
-      "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj",
+      "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj",
       "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\obj\\",
+      "outputPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
+        "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\NuGet.Config",
         "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -348,8 +352,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
-              "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj"
+            "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
+              "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj"
             }
           }
         }

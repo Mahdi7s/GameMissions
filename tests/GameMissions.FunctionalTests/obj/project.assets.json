@@ -8466,19 +8466,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mah\\.nuget\\packages\\": {}
+    "C:\\Users\\mah\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.FunctionalTests\\GameMissions.FunctionalTests.csproj",
+      "projectUniqueName": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.FunctionalTests\\GameMissions.FunctionalTests.csproj",
       "projectName": "GameMissions.FunctionalTests",
-      "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.FunctionalTests\\GameMissions.FunctionalTests.csproj",
+      "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.FunctionalTests\\GameMissions.FunctionalTests.csproj",
       "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.FunctionalTests\\obj\\",
+      "outputPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.FunctionalTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
+        "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\NuGet.Config",
         "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8492,8 +8496,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj": {
-              "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj"
+            "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj": {
+              "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj"
             }
           }
         }
