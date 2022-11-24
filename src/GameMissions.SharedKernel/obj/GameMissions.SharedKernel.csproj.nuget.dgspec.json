@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {}
+    "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
+    "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
+        "projectUniqueName": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
         "projectName": "GameMissions.SharedKernel",
-        "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
+        "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\obj\\",
+        "outputPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
+          "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\NuGet.Config",
           "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

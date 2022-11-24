@@ -11,9 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("GameMissions.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core", "GameMissions.Core.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("GameMissions.SharedKernel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel", "GameMissions.SharedKernel.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("GameMissions.UnitTests", "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.UnitTests", "GameMissions.UnitTests.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameMissions.FunctionalTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

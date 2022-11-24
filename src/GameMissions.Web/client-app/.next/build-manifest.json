@@ -11,9 +11,9 @@
   ],
   "lowPriorityFiles": [
     "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/development/_ssgManifest.js",
+    "static/development/_middlewareManifest.js"
   ],
-  "rootMainFiles": [],
   "pages": {
     "/": [
       "static/chunks/webpack.js",
@@ -30,6 +30,7 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+<<<<<<< HEAD
     "/cards": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -39,6 +40,17 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/pages/error.js"
+=======
+    "/icons": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/icons.js"
+    ],
+    "/tables": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/tables.js"
+>>>>>>> 6265676f103db0c318e5dceaa420d273420542bf
     ]
   },
   "ampFirstPages": []

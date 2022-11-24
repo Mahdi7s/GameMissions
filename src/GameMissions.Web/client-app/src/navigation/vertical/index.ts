@@ -9,6 +9,10 @@ import CreditCardOutline from 'mdi-material-ui/CreditCardOutline'
 import AccountPlusOutline from 'mdi-material-ui/AccountPlusOutline'
 import AlertCircleOutline from 'mdi-material-ui/AlertCircleOutline'
 import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
+import Cellphone from 'mdi-material-ui/Cellphone'
+import AccountMultiple from 'mdi-material-ui/AccountMultiple'
+import GiftOpen from 'mdi-material-ui/GiftOpen'
+import Controller from 'mdi-material-ui/Controller'
 
 // ** Type import
 import { VerticalNavItemsType } from 'src/@core/layouts/types'
@@ -18,6 +22,32 @@ const navigation = (): VerticalNavItemsType => {
     {
       title: 'Dashboard',
       icon: HomeOutline,
+      path: '/'
+    },
+    {
+      sectionTitle: 'Games & Missions'
+    },
+    {
+      title: 'Games',
+      icon: Controller,
+      path: '/'
+    },
+    {
+      title: 'Missions',
+      icon: GiftOpen,
+      path: '/'
+    },
+    {
+      sectionTitle: 'Players & Devices'
+    },
+    {
+      title: 'Players',
+      icon: AccountMultiple,
+      path: '/'
+    },
+    {
+      title: 'Devices',
+      icon: Cellphone,
       path: '/'
     },
     {
