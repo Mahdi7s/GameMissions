@@ -16,7 +16,7 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>client-app\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
-    <SpaProxyServerUrl>https://localhost:3000</SpaProxyServerUrl>
+    <SpaProxyServerUrl>http://localhost:3000</SpaProxyServerUrl>
     <SpaProxyLaunchCommand>yarn dev</SpaProxyLaunchCommand>
     <ImplicitUsings>enable</ImplicitUsings>
     <TypeScriptJSXEmit>preserve</TypeScriptJSXEmit>
