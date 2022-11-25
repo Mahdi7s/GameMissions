@@ -8,5 +8,6 @@
 ## Related Projects
 - [Asp.net core and Nextjs](https://github.com/jesulink2514/nextjs-net60)
 - [React & Typescript Admin Dashboard](https://themeselection.com/react-typescript-example/)
+- [Materio MUI React Nextjs Admin Panel](https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free)
 - [Apex React Charts](https://apexcharts.com/docs/react-charts/)
 
