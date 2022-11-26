@@ -30,7 +30,7 @@ const navigation = (): VerticalNavItemsType => {
     {
       title: 'Games',
       icon: Controller,
-      path: '/'
+      path: '/games'
     },
     {
       title: 'Missions',
