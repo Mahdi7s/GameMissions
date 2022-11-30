@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using GameMissions.Core.GameAggregate;
 using GameMissions.SharedKernel;
+using GameMissions.SharedKernel.Interfaces;
 
 namespace GameMissions.Core.PlayerAggregate;
-public class Player : EntityBase
+public class Player : EntityBase, IAggregateRoot
 {
   public Device? Device { get; set; }
   public string? DeviceId { get; set; }

@@ -10,12 +10,8 @@ import {
   GridCellModes,
   GridEventListener,
   GridCellModesModel } from '@mui/x-data-grid';
-import {
-  useDemoData,
-  randomCreatedDate,
-  randomTraderName,
-  randomUpdatedDate
-} from '@mui/x-data-grid-generator';
+import Game from '../../models/Game';
+import axios from 'axios';
 
 interface SelectedCellParams {
   id: GridRowId;
@@ -98,52 +94,6 @@ function EditToolbar(props: EditToolbarProps) {
   );
 }
 
-const columns: GridColumns = [
-  { field: 'name', headerName: 'Name', width: 180, editable: true },
-  { field: 'age', headerName: 'Age', type: 'number', editable: true },
-  { field: 'dateCreated', headerName: 'Date Created', type: 'date', width: 180, editable: true, },
-  { field: 'lastLogin', headerName: 'Last Login', type: 'dateTime', width: 220, editable: true, },
-];
-
-const rows: GridRowsProp = [
-  {
-    id: 1,
-    name: randomTraderName(),
-    age: 25,
-    dateCreated: randomCreatedDate(),
-    lastLogin: randomUpdatedDate(),
-  },
-  {
-    id: 2,
-    name: randomTraderName(),
-    age: 36,
-    dateCreated: randomCreatedDate(),
-    lastLogin: randomUpdatedDate(),
-  },
-  {
-    id: 3,
-    name: randomTraderName(),
-    age: 19,
-    dateCreated: randomCreatedDate(),
-    lastLogin: randomUpdatedDate(),
-  },
-  {
-    id: 4,
-    name: randomTraderName(),
-    age: 28,
-    dateCreated: randomCreatedDate(),
-    lastLogin: randomUpdatedDate(),
-  },
-  {
-    id: 5,
-    name: randomTraderName(),
-    age: 23,
-    dateCreated: randomCreatedDate(),
-    lastLogin: randomUpdatedDate(),
-  },
-];
-
-
 const GamesGrid = () => {
   const [selectedCellParams, setSelectedCellParams] =
     React.useState<SelectedCellParams | null>(null);
@@ -177,10 +127,31 @@ const GamesGrid = () => {
     [cellMode],
   );
 
+  const [games, setGames] = React.useState<Game[]>([]);
+  const [columns, setColumns] = React.useState<GridColumns>([]);
+
+  React.useEffect(() => {
+    axios.get('/api/games').then(response => {
+      let cols: GridColumns = [];
+      for (const prop in response.data[0]) {
+        cols.push({
+          field: prop,
+          headerName: prop,
+          width: 100,
+          editable: true,
+          type: typeof (response.data[0][prop])
+        });
+      }
+      setColumns(cols);
+
+      setGames(response.data);
+    });
+  }, []);
+
   return (
     <div style={{ height: 400, width: '100%' }}>
       <DataGrid
-        rows={rows}
+        rows={games}
         columns={columns}
         onCellKeyDown={handleCellKeyDown}
         cellModesModel={cellModesModel}

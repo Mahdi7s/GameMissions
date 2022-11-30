@@ -4,13 +4,14 @@ import Mission from "./Mission";
 
 export default interface Player
 {
-  Device: Device;
-  DeviceId: string;
-  LastConnectedIP: string;
-  LocaleCode: string;
-  GameId: number;
-  Game: Game;
-  Level: number;
-  LastAdWatch: Date;
-  ClaimedMissions: Mission[];
+  id: number;
+  device?: Device;
+  deviceId: string;
+  lastConnectedIP: string;
+  localeCode: string;
+  gameId: number;
+  game?: Game;
+  level: number;
+  lastAdWatch: Date;
+  claimedMissions?: Mission[];
 }

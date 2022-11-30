@@ -1,6 +1,7 @@
+import Player from "./Player";
 
 
 export default interface Device {
-  Id: string;
-  Players: Player[];
+  id: string;
+  players?: Player[];
 }

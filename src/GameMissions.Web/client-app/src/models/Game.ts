@@ -1,12 +1,13 @@
 import Mission from './Mission';
 
 export default interface Game {
-  Title: string;
-  PackageName: string;
-  NextRewardedVideoTimeout: number; // seconds
-  RewardedVideoReward: number; // seconds
-  IntrestitialPerLevel: number;
-  Description: string;
+  id: number;
+  title: string;
+  packageName: string;
+  nextRewardedVideoTimeout: number; // seconds
+  rewardedVideoReward: number; // seconds
+  intrestitialPerLevel: number;
+  description?: string;
 
-  Missions: Mission[];
+  missions?: Mission[];
 }

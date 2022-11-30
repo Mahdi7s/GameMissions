@@ -3,6 +3,7 @@
     "run-script-os": "^1.1.6"
   },
   "dependencies": {
+    "@mui/x-data-grid": "^5.17.13",
     "react-scripts": "^5.0.1"
   }
 }
