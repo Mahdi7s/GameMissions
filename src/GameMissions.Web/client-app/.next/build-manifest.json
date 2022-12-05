@@ -11,9 +11,9 @@
   ],
   "lowPriorityFiles": [
     "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js",
-    "static/development/_middlewareManifest.js"
+    "static/development/_ssgManifest.js"
   ],
+  "rootMainFiles": [],
   "pages": {
     "/": [
       "static/chunks/webpack.js",
@@ -30,6 +30,7 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
     "/cards": [
       "static/chunks/webpack.js",
@@ -51,6 +52,12 @@
       "static/chunks/main.js",
       "static/chunks/pages/tables.js"
 >>>>>>> 6265676f103db0c318e5dceaa420d273420542bf
+=======
+    "/games": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/games.js"
+>>>>>>> b417bc9367ff7cc797595ffa475035dc33bb5682
     ]
   },
   "ampFirstPages": []

@@ -8,4 +8,10 @@ using GameMissions.SharedKernel;
 namespace GameMissions.Core.GameAggregate.Events;
 public class GameUpdatedEvent : DomainEventBase
 {
+  public Game UpdatedGame { get; }
+
+  public GameUpdatedEvent(Game updatedGame)
+  {
+    UpdatedGame = updatedGame;
+  }
 }

@@ -8,7 +8,7 @@ using GameMissions.SharedKernel;
 namespace GameMissions.Core.GameAggregate.Events;
 public class GameAddedEvent : DomainEventBase
 {
-  public Game NewGame { get; set; }
+  public Game NewGame { get; }
 
   public GameAddedEvent(Game newGame)
   {

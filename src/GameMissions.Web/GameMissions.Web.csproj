@@ -44,6 +44,38 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="client-app\src\fake-db\index.ts" />
+    <None Remove="client-app\src\fake-db\mock-data.ts" />
+    <None Remove="client-app\src\fake-db\mock.ts" />
+    <None Remove="client-app\src\models\Device.ts" />
+    <None Remove="client-app\src\models\Game.ts" />
+    <None Remove="client-app\src\models\Mission.ts" />
+    <None Remove="client-app\src\models\Player.ts" />
+    <None Remove="client-app\src\pages\games\index.tsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="client-app\src\pages\missions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="client-app\src\fake-db\index.ts" />
+    <TypeScriptCompile Include="client-app\src\fake-db\mock-data.ts" />
+    <TypeScriptCompile Include="client-app\src\fake-db\mock.ts" />
+    <TypeScriptCompile Include="client-app\src\models\Device.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="client-app\src\models\Player.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="client-app\src\models\Mission.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="client-app\src\models\Game.ts" />
+    <TypeScriptCompile Include="client-app\src\pages\games\index.tsx" />
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
