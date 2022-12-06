@@ -1,0 +1,202 @@
+2022-12-06 11:54:36.126 +03:30 [INF] Registered 5 endpoints in 3343 milliseconds.
+2022-12-06 11:54:36.615 +03:30 [INF] User profile is available. Using 'C:\Users\mah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-06 11:54:36.937 +03:30 [INF] Starting Duende IdentityServer version 6.0.4+9dfb7e94e795f55b2c063d54d11b70aae05e4e07 (.NET 7.0.0)
+2022-12-06 11:54:36.956 +03:30 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2022-12-06 11:54:36.991 +03:30 [INF] Configuring local API resource 'GameMissions.WebAPI'.
+2022-12-06 11:54:37.000 +03:30 [INF] Configuring client 'GameMissions.Web'.
+2022-12-06 11:54:37.012 +03:30 [INF] Loading development key at 'C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Web\obj/tempkey.json'.
+2022-12-06 11:54:37.261 +03:30 [INF] Resource 'GameMissions.WebAPI' allows all applications.
+2022-12-06 11:54:37.264 +03:30 [INF] Identity resource 'openid' allows all applications.
+2022-12-06 11:54:37.265 +03:30 [INF] Identity resource 'profile' allows all applications.
+2022-12-06 11:54:37.320 +03:30 [INF] Using explicitly configured authentication scheme Identity.Application for IdentityServer
+2022-12-06 11:54:39.459 +03:30 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2022-12-06 11:54:39.735 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL
+);
+2022-12-06 11:54:39.738 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Devices" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Devices" PRIMARY KEY
+);
+2022-12-06 11:54:39.740 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Games" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Games" PRIMARY KEY AUTOINCREMENT,
+    "Title" TEXT NOT NULL,
+    "PackageName" TEXT NOT NULL,
+    "NextRewardedVideoTimeout" INTEGER NOT NULL,
+    "RewardedVideoReward" INTEGER NOT NULL,
+    "IntrestitialPerLevel" INTEGER NOT NULL,
+    "Description" TEXT NOT NULL
+);
+2022-12-06 11:54:39.742 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Projects" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Projects" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Priority" INTEGER NOT NULL
+);
+2022-12-06 11:54:39.745 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Players" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Players" PRIMARY KEY AUTOINCREMENT,
+    "DeviceId" TEXT NULL,
+    "LastConnectedIP" TEXT NULL,
+    "LocaleCode" TEXT NOT NULL,
+    "GameId" INTEGER NOT NULL,
+    "Level" INTEGER NOT NULL,
+    "LastAdWatch" TEXT NOT NULL,
+    CONSTRAINT "FK_Players_Devices_DeviceId" FOREIGN KEY ("DeviceId") REFERENCES "Devices" ("Id"),
+    CONSTRAINT "FK_Players_Games_GameId" FOREIGN KEY ("GameId") REFERENCES "Games" ("Id") ON DELETE CASCADE
+);
+2022-12-06 11:54:39.748 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ToDoItems" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_ToDoItems" PRIMARY KEY AUTOINCREMENT,
+    "Title" TEXT NOT NULL,
+    "Description" TEXT NOT NULL,
+    "ContributorId" INTEGER NULL,
+    "IsDone" INTEGER NOT NULL,
+    "ProjectId" INTEGER NULL,
+    CONSTRAINT "FK_ToDoItems_Projects_ProjectId" FOREIGN KEY ("ProjectId") REFERENCES "Projects" ("Id")
+);
+2022-12-06 11:54:39.751 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Missions" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Missions" PRIMARY KEY AUTOINCREMENT,
+    "GameId" INTEGER NOT NULL,
+    "MissionType" INTEGER NOT NULL,
+    "CompletionLevel" INTEGER NOT NULL,
+    "Title" TEXT NULL,
+    "Order" INTEGER NOT NULL,
+    "Reward" INTEGER NOT NULL,
+    "Description" TEXT NULL,
+    "PlayerId" INTEGER NULL,
+    CONSTRAINT "FK_Missions_Games_GameId" FOREIGN KEY ("GameId") REFERENCES "Games" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Missions_Players_PlayerId" FOREIGN KEY ("PlayerId") REFERENCES "Players" ("Id")
+);
+2022-12-06 11:54:39.772 +03:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Missions_GameId" ON "Missions" ("GameId");
+2022-12-06 11:54:39.775 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Missions_PlayerId" ON "Missions" ("PlayerId");
+2022-12-06 11:54:39.778 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Players_DeviceId" ON "Players" ("DeviceId");
+2022-12-06 11:54:39.782 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Players_GameId" ON "Players" ("GameId");
+2022-12-06 11:54:39.785 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ToDoItems_ProjectId" ON "ToDoItems" ("ProjectId");
+2022-12-06 11:54:40.272 +03:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "ToDoItems" AS "t")
+2022-12-06 11:54:40.348 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Name", "p"."Priority"
+FROM "Projects" AS "p"
+2022-12-06 11:54:40.356 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."ContributorId", "t"."Description", "t"."IsDone", "t"."ProjectId", "t"."Title"
+FROM "ToDoItems" AS "t"
+2022-12-06 11:54:40.364 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name"
+FROM "Contributors" AS "c"
+2022-12-06 11:54:40.725 +03:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name")
+VALUES (@p0)
+RETURNING "Id";
+2022-12-06 11:54:40.751 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name")
+VALUES (@p0)
+RETURNING "Id";
+2022-12-06 11:54:40.863 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 12), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Projects" ("Name", "Priority")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2022-12-06 11:54:40.889 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Int32), @p3='?' (Size = 31), @p4='?' (DbType = Boolean), @p5='?' (DbType = Int32), @p6='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ToDoItems" ("ContributorId", "Description", "IsDone", "ProjectId", "Title")
+VALUES (@p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2022-12-06 11:54:40.895 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 81), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ToDoItems" ("ContributorId", "Description", "IsDone", "ProjectId", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2022-12-06 11:54:40.900 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 59), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ToDoItems" ("ContributorId", "Description", "IsDone", "ProjectId", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2022-12-06 11:54:41.398 +03:30 [INF] Now listening on: https://localhost:7278
+2022-12-06 11:54:41.400 +03:30 [INF] Now listening on: http://localhost:5250
+2022-12-06 11:54:41.401 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-06 11:54:41.402 +03:30 [INF] Hosting environment: Development
+2022-12-06 11:54:41.403 +03:30 [INF] Content root path: C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Web
+2022-12-06 11:54:52.170 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 11:54:54.412 +03:30 [INF] No SPA development server running at http://localhost:3000 found.
+2022-12-06 11:54:54.758 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 11:54:54.784 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 2617.8017ms
+2022-12-06 11:54:58.171 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 11:55:08.182 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 11:55:08.184 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10013.3987ms
+2022-12-06 11:55:11.334 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 11:55:21.346 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 11:55:21.347 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10013.4970ms
+2022-12-06 11:55:24.502 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 11:55:31.110 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 11:55:31.111 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 6608.9014ms
+2022-12-06 11:55:34.201 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 11:55:34.251 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 11:55:34.253 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 52.5426ms
+2022-12-06 11:55:37.341 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 11:55:37.365 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 11:55:37.367 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 26.7460ms
+2022-12-06 12:02:08.578 +03:30 [INF] Registered 5 endpoints in 2760 milliseconds.
+2022-12-06 12:02:09.012 +03:30 [INF] User profile is available. Using 'C:\Users\mah\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-06 12:02:09.388 +03:30 [INF] Starting Duende IdentityServer version 6.0.4+9dfb7e94e795f55b2c063d54d11b70aae05e4e07 (.NET 7.0.0)
+2022-12-06 12:02:09.414 +03:30 [WRN] You do not have a valid license key for the Duende software. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+2022-12-06 12:02:09.458 +03:30 [INF] Configuring local API resource 'GameMissions.WebAPI'.
+2022-12-06 12:02:09.466 +03:30 [INF] Configuring client 'GameMissions.Web'.
+2022-12-06 12:02:09.475 +03:30 [INF] Loading development key at 'C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Web\obj/tempkey.json'.
+2022-12-06 12:02:09.708 +03:30 [INF] Resource 'GameMissions.WebAPI' allows all applications.
+2022-12-06 12:02:09.712 +03:30 [INF] Identity resource 'openid' allows all applications.
+2022-12-06 12:02:09.713 +03:30 [INF] Identity resource 'profile' allows all applications.
+2022-12-06 12:02:09.734 +03:30 [INF] Using explicitly configured authentication scheme Identity.Application for IdentityServer
+2022-12-06 12:02:11.458 +03:30 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-12-06 12:02:11.820 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "ToDoItems" AS "t")
+2022-12-06 12:02:12.621 +03:30 [INF] Now listening on: https://localhost:7278
+2022-12-06 12:02:12.622 +03:30 [INF] Now listening on: http://localhost:5250
+2022-12-06 12:02:12.624 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-06 12:02:12.625 +03:30 [INF] Hosting environment: Development
+2022-12-06 12:02:12.626 +03:30 [INF] Content root path: C:\Users\mah\Documents\Projects\GameMissions\src\GameMissions.Web
+2022-12-06 12:02:20.547 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:02:22.768 +03:30 [INF] No SPA development server running at http://localhost:3000 found.
+2022-12-06 12:02:23.078 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 12:02:23.090 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 2551.1213ms
+2022-12-06 12:02:32.715 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:02:42.722 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 12:02:42.724 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10009.1934ms
+2022-12-06 12:02:45.837 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:02:55.845 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 12:02:55.847 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10010.2050ms
+2022-12-06 12:02:58.999 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:03:09.012 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 12:03:09.014 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10014.5630ms
+2022-12-06 12:03:12.146 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:03:22.166 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 12:03:22.170 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10023.8701ms
+2022-12-06 12:03:25.309 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:03:35.380 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 12:03:35.382 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10072.5371ms
+2022-12-06 12:03:38.509 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:03:48.517 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 12:03:48.519 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10009.5973ms
+2022-12-06 12:03:51.620 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:04:01.646 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 12:04:01.648 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10027.6300ms
+2022-12-06 12:04:05.219 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:04:15.231 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 12:04:15.233 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10014.4055ms
+2022-12-06 12:04:18.353 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:04:28.365 +03:30 [INF] SPA proxy is not ready. Returning temporary landing page.
+2022-12-06 12:04:28.367 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 200 - text/html 10013.9961ms
+2022-12-06 12:04:30.428 +03:30 [ERR] Unable to connect to the SPA development server at 'http://localhost:3000'.
+2022-12-06 12:04:31.464 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7278/ - -
+2022-12-06 12:04:39.830 +03:30 [INF] SPA proxy is ready. Redirecting to http://localhost:3000.
+2022-12-06 12:04:39.835 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7278/ - - - 302 0 - 8370.5913ms

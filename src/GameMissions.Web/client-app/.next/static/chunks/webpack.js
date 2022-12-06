@@ -183,15 +183,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = function() { return "99fbe815aa6219d5"; }
-=======
-/******/ 		__webpack_require__.h = function() { return "e08216e4c37b3117"; }
->>>>>>> 6265676f103db0c318e5dceaa420d273420542bf
-=======
-/******/ 		__webpack_require__.h = function() { return "413d9376f9bbd282"; }
->>>>>>> b417bc9367ff7cc797595ffa475035dc33bb5682
+/******/ 		__webpack_require__.h = function() { return "ce5da85d58d23a60"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
