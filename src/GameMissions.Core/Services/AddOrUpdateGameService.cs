@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,17 +22,36 @@ public class AddOrUpdateGameService : IAddOrUpdateGameService
     _mediator = mediator;
   }
 
-  public Task<Result> AddOrUpdate(Game game)
+  public async Task<Result<Game>> AddOrUpdate(Game game)
   {
     var gameInDb = _repository.GetByIdAsync(game.Id);
     if(gameInDb == null) // add
     {
+      try
+      {
+        game = await _repository.AddAsync(game);
 
-      _mediator.Send(new GameAddedEvent(game));
+        await _mediator.Publish(new GameAddedEvent(game));
+      }
+      catch(Exception ex)
+      {
+        return Result<Game>.Error("Game Insert Error", ex.Message);
+      }
     }
     else // update
     {
-      _mediator.Send(new GameUpdatedEvent(game));
+      try
+      {
+        await _repository.UpdateAsync(game);
+
+        await _mediator.Publish(new GameUpdatedEvent(game));
+      }
+      catch(Exception ex)
+      {
+        return Result<Game>.Error("Game Update Error", ex.Message);
+      }
     }
+
+    return new Result<Game>(game);
   }
 }

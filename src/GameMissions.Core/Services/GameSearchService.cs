@@ -12,9 +12,9 @@ using GameMissions.SharedKernel.Interfaces;
 namespace GameMissions.Core.Services;
 public class GameSearchService : IGameSearchService
 {
-  private readonly IRepository<Game> _repository;
+  private readonly IReadRepository<Game> _repository;
 
-  public GameSearchService(IRepository<Game> repository) {
+  public GameSearchService(IReadRepository<Game> repository) {
     _repository = repository;
   }
 

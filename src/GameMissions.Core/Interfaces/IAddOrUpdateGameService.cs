@@ -9,5 +9,5 @@ using GameMissions.Core.GameAggregate;
 namespace GameMissions.Core.Interfaces;
 public interface IAddOrUpdateGameService
 {
-  Task<Result> AddOrUpdate(Game game);
+  Task<Result<Game>> AddOrUpdate(Game game);
 }

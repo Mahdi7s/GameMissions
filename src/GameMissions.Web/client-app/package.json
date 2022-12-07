@@ -12,7 +12,7 @@
     "@mui/lab": "^5.0.0-alpha.70",
     "@mui/material": "^5.10.15",
     "@mui/x-data-grid": "^5.17.13",
-    "@mui/x-data-grid-generator": "^5.17.13",
+    "@mui/x-data-grid-generator": "^5.17.14",
     "@popperjs/core": "^2.11.2",
     "apexcharts-clevision": "3.28.5",
     "axios": "^1.2.0",
