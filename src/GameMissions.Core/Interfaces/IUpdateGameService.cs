@@ -7,7 +7,7 @@ using Ardalis.Result;
 using GameMissions.Core.GameAggregate;
 
 namespace GameMissions.Core.Interfaces;
-public interface IAddOrUpdateGameService
+public interface IUpdateGameService
 {
-  Task<Result<Game>> AddOrUpdate(Game game);
+  Task<Result> UpdateGame(Game gameToUpdate);
 }
