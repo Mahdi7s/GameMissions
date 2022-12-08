@@ -50,11 +50,15 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Compile Remove="client-app\src\components\**" />
+    <Compile Remove="Services\**" />
     <Content Remove="$(SpaRoot)**" />
     <Content Remove="client-app\src\components\**" />
+    <Content Remove="Services\**" />
     <EmbeddedResource Remove="client-app\src\components\**" />
+    <EmbeddedResource Remove="Services\**" />
     <None Remove="$(SpaRoot)**" />
     <None Remove="client-app\src\components\**" />
+    <None Remove="Services\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
@@ -71,7 +75,6 @@
 
   <ItemGroup>
     <Folder Include="client-app\src\pages\missions\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -131,7 +131,7 @@ const GamesGrid = () => {
   const [columns, setColumns] = React.useState<GridColumns>([]);
 
   React.useEffect(() => {
-    axios.get('/api/games').then(response => {
+    axios.get('/games').then(response => {
       let cols: GridColumns = [];
       for (const prop in response.data[0]) {
         cols.push({

@@ -8,10 +8,10 @@ using GameMissions.SharedKernel;
 namespace GameMissions.Core.GameAggregate.Events;
 public class GameDeletedEvent : DomainEventBase
 {
-  public int GameId { get; set; }
+  public Game Game { get; set; }
 
-  public GameDeletedEvent(int gameId)
+  public GameDeletedEvent(Game game)
   {
-    GameId = gameId;
+    Game = game;
   }
 }

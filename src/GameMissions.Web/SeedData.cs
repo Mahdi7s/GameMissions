@@ -1,6 +1,9 @@
 ﻿
 using GameMissions.Core.ContributorAggregate;
+using GameMissions.Core.GameAggregate;
+using GameMissions.Core.PlayerAggregate;
 using GameMissions.Core.ProjectAggregate;
+using GameMissions.Core.Services;
 using GameMissions.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,71 +11,51 @@ namespace GameMissions.Web;
 
 public static class SeedData
 {
-  public static readonly Contributor Contributor1 = new("Ardalis");
-  public static readonly Contributor Contributor2 = new("Snowfrog");
-  public static readonly Project TestProject1 = new Project("Test Project", PriorityStatus.Backlog);
-  public static readonly ToDoItem ToDoItem1 = new ToDoItem
-  {
-    Title = "Get Sample Working",
-    Description = "Try to get the sample to build."
-  };
-  public static readonly ToDoItem ToDoItem2 = new ToDoItem
-  {
-    Title = "Review Solution",
-    Description = "Review the different projects in the solution and how they relate to one another."
-  };
-  public static readonly ToDoItem ToDoItem3 = new ToDoItem
-  {
-    Title = "Run and Review Tests",
-    Description = "Make sure all the tests run and review what they are doing."
-  };
-
-  public static void Initialize(IServiceProvider serviceProvider)
+  public static async Task Initialize(IServiceProvider serviceProvider)
   {
     using (var dbContext = new AppDbContext(
         serviceProvider.GetRequiredService<DbContextOptions<AppDbContext>>(), null))
     {
-      // Look for any TODO items.
-      if (dbContext.ToDoItems.Any())
+      // Look for any Game records.
+      if (dbContext.Games.Any())
       {
         return;   // DB has been seeded
       }
 
-      PopulateTestData(dbContext);
-
-
+      await PopulateTestGameData(dbContext);
     }
   }
-  public static void PopulateTestData(AppDbContext dbContext)
+
+  public static async Task PopulateTestGameData(AppDbContext dbContext)
   {
-    foreach (var item in dbContext.Projects)
+    List<Game> games = new();
+    for(int i = 0; i < 10; i++)
     {
-      dbContext.Remove(item);
+      var game = new Game($"Game#{i}", $"Game_#{i}.Package.Name");
+
+      dbContext.Add(game);
+      await dbContext.SaveChangesAsync();
+
+      for (int j = 0; j < 10; j++)
+      {
+        var referralReward = 50 + (i + 1) * 25;
+        var referralMission = new Mission(game.Id, (int)MissionType.Referral, 1, $"Invite a friend", 5, referralReward,
+          $"Invite a friend to game {game.Title} and get {referralReward} coins as the reward.");
+
+        game.AddMission(referralMission);
+      }
+
+      games.Add(game);
     }
-    foreach (var item in dbContext.ToDoItems)
+
+    for (var i = 0; i < 10; i++)
     {
-      dbContext.Remove(item);
+      var device = new Device($"Device#{i}");
+      var game = games[Random.Shared.Next(0, games.Count)];
+      var player = new Player(device.Id, game.Id, Random.Shared.Next(1, 500), DateTime.Now);
+      device.AddPlayer(player);
+
+
     }
-    foreach (var item in dbContext.Contributors)
-    {
-      dbContext.Remove(item);
-    }
-    dbContext.SaveChanges();
-
-    dbContext.Contributors.Add(Contributor1);
-    dbContext.Contributors.Add(Contributor2);
-
-    dbContext.SaveChanges();
-
-    ToDoItem1.AddContributor(Contributor1.Id);
-    ToDoItem2.AddContributor(Contributor2.Id);
-    ToDoItem3.AddContributor(Contributor1.Id);
-
-    TestProject1.AddItem(ToDoItem1);
-    TestProject1.AddItem(ToDoItem2);
-    TestProject1.AddItem(ToDoItem3);
-    dbContext.Projects.Add(TestProject1);
-
-    dbContext.SaveChanges();
   }
 }

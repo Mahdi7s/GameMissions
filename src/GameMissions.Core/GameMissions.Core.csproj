@@ -20,4 +20,9 @@
     <ProjectReference Include="..\GameMissions.SharedKernel\GameMissions.SharedKernel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="PlayerAggregate\Handlers\" />
+    <Folder Include="PlayerAggregate\Specifications\" />
+  </ItemGroup>
+
 </Project>
