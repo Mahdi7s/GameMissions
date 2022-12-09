@@ -31,7 +31,7 @@ public static class SeedData
     List<Game> games = new();
     for(int i = 0; i < 10; i++)
     {
-      var game = new Game($"Game#{i}", $"Game_#{i}.Package.Name");
+      var game = new Game($"Game#{i}", $"Game_#{i}.Package.Name", i + 1);
 
       dbContext.Add(game);
       await dbContext.SaveChangesAsync();

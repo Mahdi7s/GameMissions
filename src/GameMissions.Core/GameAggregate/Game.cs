@@ -11,10 +11,11 @@ using GameMissions.SharedKernel.Interfaces;
 namespace GameMissions.Core.GameAggregate;
 public class Game : EntityBase, IAggregateRoot
 {
-  public Game(string title, string packageName, int nextRewardedVideoTimeout = 90, int rewardedVideoReward = 50, int intrestitialPerLevel = 2, string description = null)
+  public Game(string title, string packageName, int order, int nextRewardedVideoTimeout = 90, int rewardedVideoReward = 50, int intrestitialPerLevel = 2, string description = null)
   {
     UpdateTitle(title);
     UpdatePackageName(packageName);
+    UpdateOrder(order);
     UpdateNextRewardedVideoTimeout(nextRewardedVideoTimeout);
     UpdateRewardedVideoReward(rewardedVideoReward);
     UpdateIntrestitialPerLevel(intrestitialPerLevel);
@@ -22,6 +23,7 @@ public class Game : EntityBase, IAggregateRoot
   }
   public string Title { get; private set; } = string.Empty;
   public string PackageName { get; private set; } = string.Empty;
+  public int Order { get; private set; }
   public int NextRewardedVideoTimeout { get; private set; } = 90; // seconds
   public int RewardedVideoReward { get; private set; } = 50; // seconds
   public int IntrestitialPerLevel { get; private set; } = 2;
@@ -45,6 +47,10 @@ public class Game : EntityBase, IAggregateRoot
   public void UpdatePackageName(string packageName)
   {
     PackageName = Guard.Against.NullOrEmpty(packageName, nameof(packageName));
+  }
+  public void UpdateOrder(int order)
+  {
+    Order = Guard.Against.NegativeOrZero(order, nameof(order));
   }
   public void UpdateNextRewardedVideoTimeout(int nextRewardedVideoTimeout)
   {

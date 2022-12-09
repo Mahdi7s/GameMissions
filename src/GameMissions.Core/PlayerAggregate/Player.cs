@@ -13,11 +13,12 @@ using GameMissions.SharedKernel.Interfaces;
 namespace GameMissions.Core.PlayerAggregate;
 public class Player : EntityBase, IAggregateRoot
 {
-  public Player(string? deviceId, int gameId, int level, DateTime lastAdWatch, string? lastConnectedIP = null, string localeCode = "en")
+  public Player(string? deviceId, int gameId, int level, DateTime lastAdWatch, bool rated = false, string? lastConnectedIP = null, string localeCode = "en")
   {
     UpdateDeviceId(deviceId);
     UpdateLastConnectedIP(lastConnectedIP);
     UpdateLocaleCode(localeCode);
+    UpdateRated(rated);
     UpdateGameId(gameId);
     UpdateLevel(level);
     UpdateLastAdWatch(lastAdWatch);
@@ -30,6 +31,7 @@ public class Player : EntityBase, IAggregateRoot
   public string LocaleCode { get; private set; } = "en";
   public int GameId { get; private set; }
   public Game Game { get; private set; } = null!;
+  public bool Rated { get; private set; }
   public int Level { get; private set; }
   public DateTime LastAdWatch { get; private set; }
   private IList<Mission> _claimedMissions = new List<Mission>();
@@ -46,6 +48,10 @@ public class Player : EntityBase, IAggregateRoot
   public void UpdateDevice(Device device)
   { 
     Device = Guard.Against.Null(device, nameof(device));
+  }
+  public void UpdateRated(bool rated)
+  {
+    Rated = rated;
   }
   public void UpdateGame(Game game)
   {
