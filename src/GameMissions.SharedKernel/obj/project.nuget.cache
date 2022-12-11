@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "40d+QYGJUfG4o/Q3nDNdPlLX3n2xaDjQrOnzrwBk0J6ALaZ/U2f+Lw1NAFv75eNunIQuzc72kNaE7+FnfXMfGQ==",
+  "dgSpecHash": "8mhZy7uuIYmafcjmeKU/jKDliQ7DLjOL9E1rgi9ZoQe7m8qRw4bfdrhnpsBhMaXIudijZ9S4X87N2q4iD510bQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
+  "projectFilePath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mah\\.nuget\\packages\\ardalis.specification\\6.1.0\\ardalis.specification.6.1.0.nupkg.sha512",
     "C:\\Users\\mah\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",

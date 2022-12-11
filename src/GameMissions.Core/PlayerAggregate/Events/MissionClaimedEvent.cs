@@ -9,10 +9,12 @@ using GameMissions.SharedKernel;
 namespace GameMissions.Core.PlayerAggregate.Events;
 public class MissionClaimedEvent : DomainEventBase
 {
-  public MissionClaimedEvent(Mission claimedMission) 
+  public MissionClaimedEvent(Player player, Mission claimedMission) 
   {
+    Player = player;
     ClaimedMission = claimedMission;
   }
 
+  public Player Player { get; }
   public Mission ClaimedMission { get; }
 }

@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.IntegrationTests\\GameMissions.IntegrationTests.csproj": {}
+    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.IntegrationTests\\GameMissions.IntegrationTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj": {
+    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj",
+        "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj",
         "projectName": "GameMissions.Core",
-        "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj",
+        "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj",
         "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\obj\\",
+        "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\NuGet.Config",
+          "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
           "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -31,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
-                "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj"
+              "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj"
               }
             }
           }
@@ -92,20 +89,17 @@
         }
       }
     },
-    "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj": {
+    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj",
         "projectName": "GameMissions.Infrastructure",
-        "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\NuGet.Config",
+          "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
           "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -119,11 +113,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj": {
-                "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj"
+              "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj": {
+                "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj"
               },
-              "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
-                "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj"
+              "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj"
               }
             }
           }
@@ -187,20 +181,17 @@
         }
       }
     },
-    "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
+    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
+        "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
         "projectName": "GameMissions.SharedKernel",
-        "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
+        "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\GameMissions.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.SharedKernel\\obj\\",
+        "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\NuGet.Config",
+          "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
           "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -255,20 +246,17 @@
         }
       }
     },
-    "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.IntegrationTests\\GameMissions.IntegrationTests.csproj": {
+    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.IntegrationTests\\GameMissions.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.IntegrationTests\\GameMissions.IntegrationTests.csproj",
+        "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.IntegrationTests\\GameMissions.IntegrationTests.csproj",
         "projectName": "GameMissions.IntegrationTests",
-        "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.IntegrationTests\\GameMissions.IntegrationTests.csproj",
+        "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.IntegrationTests\\GameMissions.IntegrationTests.csproj",
         "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.IntegrationTests\\obj\\",
+        "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.IntegrationTests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\NuGet.Config",
+          "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
           "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -282,11 +270,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj"
+              "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Infrastructure\\GameMissions.Infrastructure.csproj"
               },
-              "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj": {
-                "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj"
+              "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj": {
+                "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj"
               }
             }
           }
@@ -350,20 +338,17 @@
         }
       }
     },
-    "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj": {
+    "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj",
         "projectName": "GameMissions.UnitTests",
-        "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj",
+        "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.UnitTests\\GameMissions.UnitTests.csproj",
         "packagesPath": "C:\\Users\\mah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\tests\\GameMissions.UnitTests\\obj\\",
+        "outputPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\tests\\GameMissions.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\NuGet.Config",
+          "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\NuGet.Config",
           "C:\\Users\\mah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -377,8 +362,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj": {
-                "projectPath": "C:\\Users\\mah\\source\\repos\\GameMissions\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj"
+              "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj": {
+                "projectPath": "C:\\Users\\mah\\Documents\\Projects\\GameMissions\\src\\GameMissions.Core\\GameMissions.Core.csproj"
               }
             }
           }
