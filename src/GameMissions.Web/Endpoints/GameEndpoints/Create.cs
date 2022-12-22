@@ -12,7 +12,7 @@ public class Create : EndpointBaseAsync.WithRequest<CreateGameRequest>.WithActio
 
   public Create(IAddGameService addGameService) { _addGameService = addGameService; }
 
-  [HttpPost("/Games")]
+  [HttpPost(CreateGameRequest.Route)]
   [SwaggerOperation(
     Summary ="Creates a new Game",
     Description = "Creates a new Game",
