@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Ardalis.Specification;
 
 namespace GameMissions.Core.GameAggregate.Specifications;
-public class MissionWithGameByMissionIdSpec : Specification<Mission>, ISingleResultSpecification<Game>
+public class MissionWithGameByMissionIdSpec : Specification<Mission>, ISingleResultSpecification<Mission>
 {
   public MissionWithGameByMissionIdSpec(int missionId)
   {

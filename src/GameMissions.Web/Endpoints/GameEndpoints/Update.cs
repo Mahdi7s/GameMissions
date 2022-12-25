@@ -15,7 +15,7 @@ public class Update : EndpointBaseAsync.WithRequest<UpdateGameRequest>.WithActio
     _updateGameService = updateGameService;
   }
 
-  [HttpGet(UpdateGameRequest.Route)]
+  [HttpPut(UpdateGameRequest.Route)]
   [SwaggerOperation(
       Summary = "Updates a Game",
       Description = "Updates a Game",

@@ -23,7 +23,7 @@ public class List : EndpointBaseAsync.WithoutRequest.WithActionResult<GameListRe
       OperationId = "Game.List",
       Tags = new[] { "GameEndpoints" })
   ]
-  public async override Task<ActionResult<GameListResponse>> HandleAsync(CancellationToken cancellationToken = default)
+  public async override Task<ActionResult<GameListResponse>> HandleAsync(CancellationToken cancellationToken = new())
   {
     var games = await _gameSearchService.GetAllGamesAsync();
     if(!games.IsSuccess || games.Errors.Any() || games.Value.Count <= 0)
