@@ -8,8 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GameMissions.FunctionalTests
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\mah\Documents\Projects\GameMissions\tests\GameMissions.FunctionalTests\
-=======
-build_property.ProjectDir = c:\Users\mah\source\repos\GameMissions\GameMissions\tests\GameMissions.FunctionalTests\
->>>>>>> b84de0d0da1f3c7fb354d31b180fe0d26b397e75
+build_property.ProjectDir = C:\Users\mah\source\repos\GameMissions\GameMissions\tests\GameMissions.FunctionalTests\

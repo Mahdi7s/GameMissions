@@ -24,6 +24,15 @@ public class Create : EndpointBaseAsync.WithRequest<CreateMissionRequest>.WithAc
     Tags = new[] { "MissionEndpoints" })]
   public override async Task<ActionResult<CreateMissionResponse>> HandleAsync(CreateMissionRequest request, CancellationToken cancellationToken = new())
   {
-    
+    if (string.IsNullOrEmpty(request.Title))
+    {
+      return BadRequest();
+    }
+
+    var addedMission = await _missionRepository.AddAsync(new Mission(request.GameId, request.MissionType, request.Order, request.Title, request.CompletionLevel, request.Reward, request.Description), cancellationToken);
+
+    var response = new CreatePlayerResponse(addedMission.Id);
+
+    return Ok(response);
   }
 }
