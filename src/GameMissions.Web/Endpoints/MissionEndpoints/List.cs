@@ -3,6 +3,7 @@ using GameMissions.Core.GameAggregate;
 using GameMissions.Core.GameAggregate.Specifications;
 using GameMissions.SharedKernel.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace GameMissions.Web.Endpoints.MissionEndpoints;
 
@@ -15,6 +16,12 @@ public class List : EndpointBaseAsync.WithoutRequest.WithActionResult<MissionLis
     _missionRepository = missionRepository;
   }
 
+  [HttpGet("/Missions")]
+  [SwaggerOperation(
+Summary = "Gets a single Mission",
+Description = "Gets a single Mission by Id",
+OperationId = "Missions.GetById",
+Tags = new[] { "MissionEndpoints" })]
   public override async Task<ActionResult<MissionListResponse>> HandleAsync(CancellationToken cancellationToken = new())
   {
     var spec = new AllMissionsSpec();

@@ -17,7 +17,7 @@ public class GetById : EndpointBaseAsync.WithRequest<GetMissionByIdRequest>.With
     _missionRepository = missionRepository;
   }
 
-  [HttpGet(GetProjectByIdRequest.Route)]
+  [HttpGet(GetMissionByIdRequest.Route)]
   [SwaggerOperation(
   Summary = "Gets a single Mission",
   Description = "Gets a single Mission by Id",

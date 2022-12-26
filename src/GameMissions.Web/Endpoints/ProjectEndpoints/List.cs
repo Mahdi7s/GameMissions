@@ -22,8 +22,7 @@ public class List : EndpointBaseAsync
       Summary = "Gets a list of all Projects",
       Description = "Gets a list of all Projects",
       OperationId = "Project.List",
-      Tags = new[] { "ProjectEndpoints" })
-  ]
+      Tags = new[] { "ProjectEndpoints" })]
   public override async Task<ActionResult<ProjectListResponse>> HandleAsync(
     CancellationToken cancellationToken = new())
   {

@@ -13,7 +13,9 @@ public class MissionClaimedHandler : INotificationHandler<MissionClaimedEvent>
   {
     if (claimedMissionEvent.ClaimedMission.MissionType == MissionType.Install)
     {
-      claimedMissionEvent.Player.Device.
+      //claimedMissionEvent.Player.Device.
     }
+
+    return Task.CompletedTask;
   }
 }

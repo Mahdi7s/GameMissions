@@ -17,7 +17,7 @@ public class Update : EndpointBaseAsync.WithRequest<UpdatePlayerRequest>.WithAct
     _playerRepository = playerRepository;
   }
 
-  [HttpPut(UpdateGameRequest.Route)]
+  [HttpPut(UpdatePlayerRequest.Route)]
   [SwaggerOperation(
     Summary = "Updates a Player",
     Description = "Updates a Player",

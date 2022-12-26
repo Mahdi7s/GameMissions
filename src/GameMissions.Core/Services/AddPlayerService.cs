@@ -22,6 +22,20 @@ public class AddPlayerService : IAddPlayerService
 
   public async Task<Result<int>> AddPlayer(Player playerToAdd)
   {
-    // check if device is not exists add it
+    if(string.IsNullOrEmpty(playerToAdd.DeviceId))
+    {
+      return Result<int>.Error($"{nameof(playerToAdd.DeviceId)} is needed to add new player");
+    }
+
+    var device = await _deviceRepository.GetByIdAsync(playerToAdd.DeviceId);
+    if (device == null)
+    {
+      device = await _deviceRepository.AddAsync(new Device(playerToAdd.DeviceId));
+      playerToAdd.UpdateDevice(device);
+    }
+
+    playerToAdd = await _playerRepository.AddAsync(playerToAdd);
+
+    return new Result<int>(playerToAdd.Id);
   }
 }

@@ -40,7 +40,8 @@ public class Update : EndpointBaseAsync.WithRequest<UpdateMissionRequest>.WithAc
     mission.UpdateOrder(request.Order);
     mission.UpdateReward(request.Reward);
 
-    var response = new UpdateMissionResponse()
+    var response = new UpdateMissionResponse(new MissionRecord(mission.Id, mission.GameId, (int)mission.MissionType, 
+      mission.Order, mission.Title,  mission.CompletionLevel, mission.Reward, mission.Description));
 
     return Ok(mission);
   }

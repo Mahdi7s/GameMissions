@@ -39,7 +39,7 @@ public class Player : EntityBase, IAggregateRoot
   public void ClaimMission(Mission mission)
   {
     _claimedMissions.Add(mission);
-    base.RegisterDomainEvent(new MissionClaimedEvent(mission));
+    base.RegisterDomainEvent(new MissionClaimedEvent(this, mission));
   }
   public void UpdateDeviceId(string deviceId)
   {
