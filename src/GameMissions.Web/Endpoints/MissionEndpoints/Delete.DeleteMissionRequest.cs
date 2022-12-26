@@ -6,5 +6,5 @@ public class DeleteMissionRequest
 
   public static string BuildRoute(int missionId) => Route.Replace("{MissionId:int}", missionId.ToString());
 
-  public int MissionId { get; }
+  public int MissionId { get; set; }
 }

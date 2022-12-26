@@ -24,6 +24,12 @@ public class List : EndpointBaseAsync.WithoutRequest.WithActionResult<MissionLis
       return NotFound();
     }
 
-    return Ok(missions);
+    var response = new MissionListResponse
+    {
+      Missions = missions.Select(m => new MissionRecord(m.Id, m.GameId, (int)m.MissionType, m.Order, m.Title, 
+        m.CompletionLevel, m.Reward, m.Description)).ToList()
+    };
+
+    return Ok(response);
   }
 }

@@ -2,4 +2,5 @@
 
 public class PlayerListResponse
 {
+  public List<PlayerRecord> Players { get; set; } = new();
 }

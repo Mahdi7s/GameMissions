@@ -19,16 +19,15 @@ public class Update : EndpointBaseAsync.WithRequest<UpdatePlayerRequest>.WithAct
 
   [HttpPut(UpdateGameRequest.Route)]
   [SwaggerOperation(
-    Summary = "Updates a Game",
-    Description = "Updates a Game",
-    OperationId = "Games.Update",
-    Tags = new[] { "GameEndpoints" })
-]
+    Summary = "Updates a Player",
+    Description = "Updates a Player",
+    OperationId = "Player.Update",
+    Tags = new[] { "PlayerEndpoints" })]
   public override async Task<ActionResult<UpdatePlayerResponse>> HandleAsync(UpdatePlayerRequest request, CancellationToken cancellationToken = new())
   {
     if (string.IsNullOrEmpty(request.DeviceId))
     {
-      return BadRequest();
+      return BadRequest();  
     }
 
     var player = await _playerRepository.GetByIdAsync(new PlayerByPlayerIdSpec(request.Id), cancellationToken);
